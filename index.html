@@ -30,15 +30,264 @@
 </head>
 
 <body>
+<style>
+  ::-webkit-scrollbar {
+  width: 7px !important;
+  height: 7px !important;
+}
 
+::-webkit-scrollbar-track {
+  background: #000 !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background:#f4f4f4 !important;
+  opacity: 0.7 !important;
+  border-radius: 5px !important;
+  transition: all 0.3s !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #fff !important;
+ 
+}
+@media (max-width:600px){
+  ::-webkit-scrollbar {
+    width: 3px !important;
+    height: 3px !important;
+  }
+}
+.radius{
+  border-radius: 10px !important;
+}
+</style>
+<style>
+  
+
+/* =====porfolio===== */
+  /* Hide every HTML inside .hover that would render outside*/
+  .hover {
+    overflow: hidden;
+
+  }
+
+  /*Animate overlay and move it 'above'*/
+  .hover .overlay {
+    transform: translate3d(-100%, 0, 0);
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+
+  /* Mouse enter event */
+  .hover.mouseenter.top .overlay {
+    animation-name: slide--enter-top;
+  }
+
+  .hover.mouseenter.right .overlay {
+    animation-name: slide--enter-right;
+  }
+
+  .hover.mouseenter.bottom .overlay {
+    animation-name: slide--enter-bottom;
+  }
+
+  .hover.mouseenter.left .overlay {
+    animation-name: slide--enter-left;
+  }
+
+  /* Mouse leave event */
+  .hover.mouseleave.top .overlay {
+    animation-name: slide--leave-top;
+  }
+
+  .hover.mouseleave.right .overlay {
+    animation-name: slide--leave-right;
+  }
+
+  .hover.mouseleave.bottom .overlay {
+    animation-name: slide--leave-bottom;
+  }
+
+  .hover.mouseleave.left .overlay {
+    animation-name: slide--leave-left;
+  }
+
+  /* Sliding animations ! */
+  @keyframes slide--enter-top {
+    0% {
+      transform: translate3d(0, -100%, 0);
+    }
+
+    100% {
+      transform: none;
+    }
+  }
+
+  @keyframes slide--enter-right {
+    0% {
+      transform: translate3d(100%, 0, 0);
+    }
+
+    100% {
+      transform: none;
+    }
+  }
+
+  @keyframes slide--enter-bottom {
+    0% {
+      transform: translate3d(0, 100%, 0);
+    }
+
+    100% {
+      transform: none;
+    }
+  }
+
+  @keyframes slide--enter-left {
+    0% {
+      transform: translate3d(-100%, 0, 0);
+    }
+
+    100% {
+      transform: none;
+    }
+  }
+
+  @keyframes slide--leave-top {
+    0% {
+      transform: none;
+    }
+
+    100% {
+      transform: translate3d(0, -100%, 0);
+    }
+  }
+
+  @keyframes slide--leave-right {
+    0% {
+      transform: none;
+    }
+
+    100% {
+      transform: translate3d(100%, 0, 0);
+    }
+  }
+
+  @keyframes slide--leave-bottom {
+    0% {
+      transform: none;
+    }
+
+    100% {
+      transform: translate3d(0, 100%, 0);
+    }
+  }
+
+  @keyframes slide--leave-left {
+    0% {
+      transform: none;
+    }
+
+    100% {
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+
+
+
+  /**
+ * BASIC CSS FOR DEMO PURPOSE
+ */
+  /* body {
+    font-family: system-ui;
+    background: #f06d06;
+    color: white;
+    text-align: center;
+  } */
+
+  .layout {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .hover {
+    background-color:  #000;
+    position: relative;
+    display: flex;
+    border-radius: 3px;
+    overflow: hidden;
+    flex: 1 1 30%;
+    margin: 1%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* width: 100%; */
+    height: 150px;
+    align-items: center;
+    justify-items: center;
+    outline: none !important;
+    border: none !important;
+    /* box-shadow: 0 0 2px 0.1px #f2f2f2; */
+    max-width: 400px;
+    margin:auto;
+  }
+  @media (max-width:576px){
+    .hover{
+      height: 200px !important;
+    }
+  }
+  .b{
+    border: 1px solid #fff !important;
+  }
+  .contents {
+    /* flex: 1; */
+    text-align: center;
+    /* display: none !important;
+    opacity: 0 !important; */
+  color: #fff !important;
+  text-decoration: none;
+  font-size: 20px;
+  text-transform: uppercase;
+  }
+  .dismiss-btn{
+    border-radius: 50%;
+    width:40px;
+    height:40px;
+    box-sizing: none !important;
+    outline: none !important;
+  }
+  .dismiss-btn:focus{
+    box-shadow: none !important;
+    outline: none !important;
+  }
+  .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  .bg_main{
+  background-color: #000 !important;
+  background: #000 !important;
+  /* opacity: 1; */
+}
+</style>
   <!-- ======= Mobile nav toggle button ======= -->
   <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
   <!-- ======= Header ======= -->
-  <header id="header">
+  <header id="header" class="px-xl-5 m-xl-3 radius shadow">
     <div class="d-flex flex-column">
 
-      <div class="profile">
+      <div class="profile d-xl-none">
         <img src="assets/img/my-img2.jpg" alt="" class="img-fluid rounded-circle">
         <h1 class="text-light"><a href="index.html">Mujahid Ali</a></h1>
         <div class="social-links mt-3 text-center">
@@ -46,7 +295,7 @@
           <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
           <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
           <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <a href="www.linkedin.com/in/mujahidali5026 " class="linkedin"><i class="bx bxl-linkedin"></i></a>
         </div>
       </div>
 
@@ -61,6 +310,7 @@
         </ul>
       </nav><!-- .nav-menu -->
     </div>
+    <!-- Mujahid Ali -->
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
@@ -71,10 +321,10 @@
     </div>
   </section><!-- End Hero -->
 
-  <main id="main">
+  <main id="main" >
 
     <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+    <section id="about" class="about px-md-5 m-md-5 shadow radius">
       <div class="container">
 
         <div class="section-title">
@@ -121,7 +371,7 @@
     </section><!-- End About Section -->
 
     <!-- ======= Facts Section ======= -->
-    <section id="facts" class="facts">
+    <section id="facts" class="facts px-md-5 m-md-5 shadow radius">
       <div class="container">
 
         <div class="section-title">
@@ -169,7 +419,7 @@
     </section><!-- End Facts Section -->
 
     <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills section-bg">
+    <section id="skills" class="skills section-bg px-md-5 m-md-5 shadow radius">
       <div class="container">
 
         <div class="section-title">
@@ -235,7 +485,7 @@
     </section><!-- End Skills Section -->
 
     <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume">
+    <section id="resume" class="resume px-md-5 m-md-5 shadow radius">
       <div class="container">
 
         <div class="section-title">
@@ -301,7 +551,12 @@
     </section><!-- End Resume Section -->
 
     <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio section-bg">
+    <section id="portfolio" class="portfolio  px-md-5 m-md-5 shadow radius">
+
+
+
+
+
       <div class="container">
 
         <div class="section-title">
@@ -322,92 +577,74 @@
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+          <div class="col-lg-4 col-md-4 col-sm-6 col-12 p-1 m-0 portfolio-item filter-app">
+            <div class="hover" style="background-image: url('assets/img/portfolio-3.jpg');"  type="button"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                <div class="overlay">
+                <div class="contents">Item 1</div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+          <div class="col-lg-4 col-md-4 col-sm-6 col-12 p-1 m-0 portfolio-item filter-web">
+            <div class="hover" style="background-image: url('assets/img/portfolio-2.jpg');"  type="button"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              <div class="overlay">
+                <div class="contents">Item 5</div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+          <div class="col-lg-4 col-md-4 col-sm-6 col-12 p-1 m-0 portfolio-item filter-app">
+            <div class="hover" style="background-image: url('assets/img/portfolio-1.jpg');"  type="button"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              <div class="overlay">
+                <div class="contents">Item 5</div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+          <div class="col-lg-4 col-md-4 col-sm-6 col-12 p-1 m-0 portfolio-item filter-card">
+            <div class="hover" style="background-image: url('assets/img/project-6.jpg');"  type="button"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              <div class="overlay">
+                <div class="contents">Item 5</div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+          <div class="col-lg-4 col-md-4 col-sm-6 col-12 p-1 m-0 portfolio-item filter-web">
+            <div class="hover" style="background-image: url('assets/img/project-5.jpg');"  type="button"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              <div class="overlay">
+                <div class="contents">Item 5</div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+          <div class="col-lg-4 col-md-4 col-sm-6 col-12 p-1 m-0 portfolio-item filter-app">
+            <div class="hover" style="background-image: url('assets/img/project-4.jpg');"  type="button"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              <div class="overlay">
+                <div class="contents">Item 5</div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+          <div class="col-lg-4 col-md-4 col-sm-6 col-12 p-1 m-0 portfolio-item filter-card">
+            <div class="hover" style="background-image: url('assets/img/project-3.jpg');"  type="button"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              <div class="overlay">
+                <div class="contents">Item 5</div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+          <div class="col-lg-4 col-md-4 col-sm-6 col-12 p-1 m-0 portfolio-item filter-card">
+            <div class="hover" style="background-image: url('assets/img/project-2.jpg');"  type="button"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              <div class="overlay">
+                <div class="contents">Item 5</div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+          <div class="ccol-lg-4 col-md-4 col-sm-6 col-12 p-1 m-0 portfolio-item filter-web">
+            <div class="hover" style="background-image: url('assets/img/project-1.jpg');"  type="button"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              <div class="overlay">
+                <div class="contents">Item 6</div>
               </div>
             </div>
           </div>
@@ -418,44 +655,44 @@
     </section><!-- End Portfolio Section -->
 
     <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
+    <section id="services" class="services px-md-5 m-md-5 shadow radius">
       <div class="container">
 
         <div class="section-title">
           <h2>Services</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>The following services I provide to my clients.</p>
         </div>
 
         <div class="row">
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
             <div class="icon"><i class="bi bi-briefcase"></i></div>
-            <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+            <h4 class="title"><a href="#">Responsive Web Design</a></h4>
+            <p class="description"> Craft visually appealing and adaptable websites to engage users across all devices efficiently.</p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
             <div class="icon"><i class="bi bi-card-checklist"></i></div>
-            <h4 class="title"><a href="">Dolor Sitema</a></h4>
-            <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+            <h4 class="title"><a href="">Front-End Development</a></h4>
+            <p class="description">Create seamless user experiences with cutting-edge technologies and intuitive interfaces for dynamic websites.</p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
             <div class="icon"><i class="bi bi-bar-chart"></i></div>
-            <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+            <h4 class="title"><a href="">Back-End Integration</a></h4>
+            <p class="description">Implement robust server-side functionalities and databases for smooth data management and seamless website operations.</p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
             <div class="icon"><i class="bi bi-binoculars"></i></div>
-            <h4 class="title"><a href="">Magni Dolores</a></h4>
-            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            <h4 class="title"><a href="">E-commerce Solutions</a></h4>
+            <p class="description">Develop secure and user-friendly online shopping platforms for businesses to boost sales and customer satisfaction.</p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
             <div class="icon"><i class="bi bi-brightness-high"></i></div>
-            <h4 class="title"><a href="">Nemo Enim</a></h4>
-            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+            <h4 class="title"><a href="">Web Performance Optimization</a></h4>
+            <p class="description"> Enhance website speed and performance to reduce loading times, ensuring a positive user experience and higher rankings.</p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
             <div class="icon"><i class="bi bi-calendar4-week"></i></div>
-            <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-            <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+            <h4 class="title"><a href="">Website Optimization Services</a></h4>
+            <p class="description">Web developers optimizing your site's performance, UX, and SEO to drive more traffic and conversions.</p>
           </div>
         </div>
 
@@ -463,22 +700,22 @@
     </section><!-- End Services Section -->
 
     <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials section-bg">
+    <section id="testimonials" class="testimonials px-md-5 m-md-5 shadow radius">
       <div class="container">
 
         <div class="section-title">
           <h2>Testimonials</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
         </div>
 
         <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
+          <div class="swiper-wrapper mt-3">
 
             <div class="swiper-slide">
               <div class="testimonial-item" data-aos="fade-up">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  Exceptional web developer! Their expertise transformed our website into a sleek, user-friendly platform. Highly efficient, responsive, and delivered beyond our expectations. A true professional!
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
                 <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
@@ -491,7 +728,7 @@
               <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                  Outstanding web developer! Their expertise brought our website to life, delivering seamless functionality and eye-catching design. Highly recommended for their professionalism and exceptional skills
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
                 <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
@@ -504,7 +741,7 @@
               <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                  Impressed by the web developer's attention to detail and problem-solving abilities. Our site now runs flawlessly, boosting our online presence and customer engagement. A true asset to any project!
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
                 <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
@@ -517,7 +754,7 @@
               <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                  Collaborating with this web developer was a game-changer. They brought creativity and innovation to the table, crafting a visually stunning and functional website. Exceeded expectations in every way!
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
                 <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
@@ -530,12 +767,12 @@
               <div class="testimonial-item" data-aos="fade-up" data-aos-delay="400">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                  Professional, reliable, and talented! The web developer demonstrated remarkable expertise in turning our vision into reality. Their dedication and skillset set them apart from the rest. Highly satisfied!
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
                 <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
                 <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
+                <h4>Software Developer</h4>
               </div>
             </div><!-- End testimonial item -->
 
@@ -547,12 +784,12 @@
     </section><!-- End Testimonials Section -->
 
     <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact px-md-5 m-md-5 mb-0 shadow radius">
       <div class="container">
 
         <div class="section-title">
           <h2>Contact</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>Feel free to reach out if you have any exciting new projects, creative ideas, or opportunities to discuss. I'm eager to explore new possibilities and contribute to your vision. Let's connect and bring your ideas to life!</p>
         </div>
 
         <div class="row" data-aos="fade-in">
@@ -562,22 +799,22 @@
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
                 <h4>Location:</h4>
-                <p>A108 Adam Street, New York, NY 535022</p>
+                <p>Distric Buner, KPK Pakistan </p>
               </div>
 
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>info@example.com</p>
+                <p>ma7531505@gmail.com</p>
               </div>
 
               <div class="phone">
                 <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>+1 5589 55488 55s</p>
+                <h4>WhatsApp:</h4>
+                <p>+923447999159</p>
               </div>
 
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4786.538189800722!2d72.54612272997055!3d34.240083694922504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38def243dec8aa7b%3A0xb7d3c4b6900abb69!2sHall%2C%20Buner%2C%20Khyber%20Pakhtunkhwa%2C%20Pakistan!5e1!3m2!1sen!2s!4v1690375724251!5m2!1sen!2s" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
           </div>
@@ -619,20 +856,15 @@
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer">
+  <!-- <footer id="footer">
     <div class="container">
       <div class="copyright">
-        <!-- &copy; Copyright <strong><span>iPortfolio</span></strong> -->
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
-        <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
+       
       </div>
     </div>
-  </footer><!-- End  Footer -->
+  </footer> -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -649,7 +881,84 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <div class="modal fade h-100" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-l ">
+      <div class="modal-content bg-primary bg-dar bg_main">
+        <div class="modal-header text-center m-0 ">
+          <h5 class="modal-title  m-auto text-uppercase text-white" id="staticBackdropLabel">Project Name</h5>
+          <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">Close</button> -->
+          <button type="button" class="dismiss-btn" data-bs-dismiss="modal"><svg class="lnr lnr-cross"><use xlink:href="#lnr-cross"></use></svg></button>
+        </div>
+        <div class="modal-body m-0 ">
+          <div class="row p-3">
+         
+          </div>
+          <img src="assets/img/project-1.jpg" alt="image" class="w-100 p-0 m-0">
+        </div>
+        <!-- <div class="modal-footer">
+         
+          <button type="button" class="btn btn-primary">Understood</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
 </body>
 
+<script>
+ 
+  const getHoverDirection = function(event) {
+    var directions = ['top', 'right', 'bottom', 'left'];
+    var item = event.currentTarget;
+
+    // Width and height of current item
+    var w = item.offsetWidth;
+    var h = item.offsetHeight;
+
+    // Calculate the x/y value of the pointer entering/exiting, relative to the center of the item.
+    // Scale (sort of normalize) the coordinate on smallest side to the scale of the longest.
+    var x = (event.clientX - item.getBoundingClientRect().left - (w / 2)) * (w > h ? (h / w) : 1);
+    var y = (event.clientY - item.getBoundingClientRect().top - (h / 2)) * (h > w ? (w / h) : 1);
+
+    // Calculate the angle to the center the pointer entered/exited
+    // and convert to clockwise format (top/right/bottom/left = 0/1/2/3).
+    var d = Math.round(Math.atan2(y, x) / 1.57079633 + 5) % 4;
+
+    return directions[d];
+  };
+
+  document.addEventListener('DOMContentLoaded', function(event) {
+    // Loop over items (in a IE11 compatible way).
+    var items = document.getElementsByClassName('hover');
+    for (var i = 0; i < items.length; i++) {
+
+      // Loop over the registered event types.
+      ['mouseenter', 'mouseleave'].forEach(function(eventname) {
+        items[i].addEventListener(eventname, function(event) {
+
+          // Retrieve the direction of the enter/leave event.
+          var dir = getHoverDirection(event);
+
+          // Reset classes.
+          // event.currentTarget.className = 'item hover';
+          // > If support for IE11 is not needed.
+          // event.currentTarget.classList.remove('mouseenter', 'mouseleave', 'top', 'right', 'bottom', 'left');
+          // > If support for IE11 is needed.
+          event.currentTarget.classList.remove('mouseenter');
+          event.currentTarget.classList.remove('mouseleave');
+          event.currentTarget.classList.remove('top');
+          event.currentTarget.classList.remove('right');
+          event.currentTarget.classList.remove('bottom');
+          event.currentTarget.classList.remove('left');
+
+          // Add the event and direction classes.
+          // > If support for IE11 is not needed.
+          // event.currentTarget.classList.add(event.type, dir);
+          // > If support for IE11 is needed.
+          event.currentTarget.className += ' ' + event.type + ' ' + dir;
+
+        }, false);
+      });
+    }
+  });
+</script>
 </html>

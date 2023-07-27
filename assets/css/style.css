@@ -952,3 +952,37 @@ section {
     padding-right: 20px 15px;
   }
 }
+
+
+
+
+/* ====================== */
+::-webkit-scrollbar {
+  width: 7px !important;
+  height: 7px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: #000 !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background:#f4f4f4 !important;
+  opacity: 0.7 !important;
+  border-radius: 5px !important;
+  transition: all 0.3s !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #fff !important;
+ 
+}
+@media (max-width:600px){
+  ::-webkit-scrollbar {
+    width: 3px !important;
+    height: 3px !important;
+  }
+}
+
+/*  */
+
