@@ -1,2 +1,0 @@
-# mujahid-ali
-my personal

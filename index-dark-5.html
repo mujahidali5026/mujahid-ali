@@ -28,7 +28,7 @@
 
 </head>
 
-<body> 
+<body class="dark"> 
 	
 	<!-- PRELOADER -->
 	<div id="preloader">
@@ -37,7 +37,9 @@
 	<!-- /PRELOADER -->
 	
 <!-- WRAPPER ALL -->
-<div class="iknow_tm_all_wrap" data-magic-cursor="show"> <!-- If you want disable magic cursor change value to "hide" -->	
+<!--<div class="iknow_tm_all_wrap" data-magic-cursor="show" data-animation-in="rotateInDownLeft" data-animation-out="rotateOutDownLeft"> -->
+<div class="iknow_tm_all_wrap" data-magic-cursor="show" data-animation-in="zoomIn" data-animation-out="zoomOut">
+<!-- If you want disable magic cursor change value to "hide" -->	
 	
 	<!-- MODALBOX -->
 	<div class="iknow_tm_modalbox">
@@ -49,147 +51,192 @@
 		</div>
 	</div>
 	<!-- /MODALBOX -->
+	
+	<div class="iknow_tm_extra_demo">
+	
+		<span class="top_shape"></span>
 		
-	<!-- TOPBAR -->
-	<div class="iknow_tm_topbar" data-position="absolute">
-		<div class="container">
+	
+		<div class="background_part">
+			<!-- Hero Shapes -->
+			<div class="rounded_shapes">
+				<span class="one anim_circle"><img class="svg" src="img/svg/shapes/11.svg" alt="" /></span>
+				<span class="two anim_scale2"><img class="svg" src="img/svg/shapes/10.svg" alt="" /></span>
+				<span class="three anim_scale2"><img class="svg" src="img/svg/shapes/6.svg" alt="" /></span>
+				<span class="four anim_scale2"><img class="svg" src="img/svg/shapes/6.svg" alt="" /></span>
+				<span class="five anim_circle"><img class="svg" src="img/svg/shapes/11.svg" alt="" /></span>
+				<span class="six anim_scale2"><img class="svg" src="img/svg/shapes/10.svg" alt="" /></span>
+				<span class="seven anim_scale2"><img class="svg" src="img/svg/shapes/6.svg" alt="" /></span>
+				<span class="eight anim_scale2"><img class="svg" src="img/svg/shapes/10.svg" alt="" /></span>
+				<span class="nine anim_scale2"><img class="svg" src="img/svg/shapes/6.svg" alt="" /></span>
+				<span class="ten anim_scale2"><img class="svg" src="img/svg/shapes/10.svg" alt="" /></span>
+				<span class="eleven anim_circle"><img class="svg" src="img/svg/shapes/11.svg" alt="" /></span>
+				<span class="twelve anim_circle"><img class="svg" src="img/svg/shapes/11.svg" alt="" /></span>
+				<span class="thirteen anim_scale2"><img class="svg" src="img/svg/shapes/6.svg" alt="" /></span>
+				<span class="fourteen anim_circle"><img class="svg" src="img/svg/shapes/11.svg" alt="" /></span>
+				<span class="fifteen anim_scale2"><img class="svg" src="img/svg/shapes/6.svg" alt="" /></span>
+				<span class="sixteen anim_scale2"><img class="svg" src="img/svg/shapes/10.svg" alt="" /></span>
+				<span class="seventeen anim_scale2"><img class="svg" src="img/svg/shapes/10.svg" alt="" /></span>
+				<span class="eighteen anim_scale2"><img class="svg" src="img/svg/shapes/10.svg" alt="" /></span>
+			</div>
+			<!-- /Hero Shapes -->
+		</div>
+			
+		
+	
+		
+		<!-- TOPBAR -->
+		<div class="iknow_tm_topbar onepage">
 			<div class="topbar_inner">
 				<div class="logo">
-					<a href="#"><img src="img/logo/dark.png" alt="" /></a>
+					<a href="#"><img src="img/logo/light.png" alt="" /></a>
 				</div>
 				<div class="right">
 					<div class="social">
 						<ul>
-							<li><a href="#"><img class="svg" src="img/svg/social/facebook.svg" alt="" /></a></li>
-							<li><a href="#"><img class="svg" src="img/svg/social/twitter.svg" alt="" /></a></li>
-							<li><a href="#"><img class="svg" src="img/svg/social/youtube.svg" alt="" /></a></li>
-							<li><a href="#"><img class="svg" src="img/svg/social/instagram.svg" alt="" /></a></li>
+							<li><a href="#"><img class="svg" src="img/svg/social/facebook-2.svg" alt="" /></a></li>
+							<li><a href="#"><img class="svg" src="img/svg/social/twitter-2.svg" alt="" /></a></li>
+							<li><a href="#"><img class="svg" src="img/svg/social/youtube-3.svg" alt="" /></a></li>
 						</ul>
 					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /TOPBAR -->
+		
+		<!-- MOBILE MENU -->
+		<div class="iknow_tm_mobile_menu">
+			<div class="mobile_menu_inner">
+				<div class="mobile_in">
+					<div class="logo">
+						<a href="#"><img src="img/logo/light.png" alt="" /></a>
+					</div>
+					<div class="trigger">
+						<div class="hamburger hamburger--slider">
+							<div class="hamburger-box">
+								<div class="hamburger-inner"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="dropdown">
+				<div class="dropdown_inner">
+					<ul class="anchor_nav">
+						<li class="current"><a href="#home">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#resume">Resume</a></li>
+						<li><a href="#portfolio">Portfolio</a></li>
+						<li><a href="#service">Service</a></li>
+						<li><a href="#testimonial">Testimonial</a></li>
+						<li><a href="#news">Blog</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- /MOBILE MENU -->
+		
+		<!-- SIDEBAR -->
+		<div class="iknow_tm_sidebar_3">
+			<div class="inner">
+				<div class="image">
+					<div class="main" data-img-url="img/about/3.jpg"></div>
+				</div>
+				<div class="menu scrollable">
+					<ul class="anchor_nav">
+						<li class="current">
+							<img class="svg" src="img/svg/squares.svg" alt="" />
+							<span>Home</span>
+							<a class="iknow_tm_full_link" href="#home"></a>
+						</li>
+						<li>
+							<img class="svg" src="img/svg/archive.svg" alt="" />
+							<span>About Me</span>
+							<a class="iknow_tm_full_link" href="#about"></a>
+						</li>
+						<li>
+							<img class="svg" src="img/svg/contacs.svg" alt="" />
+							<span>Resume</span>
+							<a class="iknow_tm_full_link" href="#resume"></a>
+						</li>
+						<li>
+							<img class="svg" src="img/svg/briefcase.svg" alt="" />
+							<span>Portfolio</span>
+							<a class="iknow_tm_full_link" href="#portfolio"></a>
+						</li>
+						<li>
+							<img class="svg" src="img/svg/gear.svg" alt="" />
+							<span>Service</span>
+							<a class="iknow_tm_full_link" href="#service"></a>
+						</li>
+<!--
+						<li>
+							<img class="svg" src="img/svg/message.svg" alt="" />
+							<span>Testimonial</span>
+							<a class="iknow_tm_full_link" href="#testimonial"></a>
+						</li>
+-->
+						<li>
+							<img class="svg" src="img/svg/writing.svg" alt="" />
+							<span>Blog</span>
+							<a class="iknow_tm_full_link" href="#news"></a>
+						</li>
+						<li>
+							<img class="svg" src="img/svg/letter.svg" alt="" />
+							<span>Contact</span>
+							<a class="iknow_tm_full_link" href="#contact"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- /SIDEBAR -->
+		
+		<!-- MAINPART -->
+		
+		<div class="iknow_tm_content_wrapper">
+			<!-- HERO -->
+			<div class="iknow_tm_hero_third" id="home">
+				<div class="background">
+					<div class="image" data-img-url="img/hero/8.jpg"></div>
+					<div class="overlay"></div>
+				</div>
+				<div class="content">
+					<span class="hello">Hello, I'm</span>
+					<h3 class="name">James Smith</h3>
+					<p class="text">A passionate UI/UX Designer and Web Developer based In NYC, USA</p>
 					<div class="iknow_tm_button">
 						<a href="img/cv/1.jpg" download>Download CV</a>
 					</div>
 				</div>
-			</div>
-		</div>
-	</div>
-	<!-- /TOPBAR -->
-	
-	<!-- HERO -->
-	<div class="iknow_tm_hero">
-		<div class="background_shape"></div>
-		<div class="hero_content">
-			<div class="container">
-				<div class="content_inner">
-					<div class="main_info">
-						<div class="left">
-							<span class="subtitle">I'm</span>
-							<h3 class="name">Jessica Parker</h3>
-							<p class="text">A passionate UI/UX Designer and Web Developer based In NYC, USA</p>
-							<div class="iknow_tm_video">
-								<div class="video_inner">
-									<div class="circle"></div>
-									<h3 class="play">Play Video</h3>
-									<a class="iknow_tm_full_link popup-youtube" href="https://www.youtube.com/watch?v=7e90gBu4pas"></a>
-								</div>
-							</div>
-						</div>
-						<div class="right">
-							<div class="image">
-								<img src="img/thumbs/47-60.jpg" alt="" />
-								<div class="main" data-img-url="img/hero/1.jpg"></div>
-							</div>
-						</div>
-					</div>
-					<div class="main_menu">
-						<ul>
-							<li>
-								<img class="svg" src="img/svg/archive.svg" alt="" />
-								<span>About Me</span>
-								<a class="iknow_tm_full_link" href="#about"></a>
-							</li>
-							<li>
-								<img class="svg" src="img/svg/contacs.svg" alt="" />
-								<span>Resume</span>
-								<a class="iknow_tm_full_link" href="#resume"></a>
-							</li>
-							<li>
-								<img class="svg" src="img/svg/briefcase.svg" alt="" />
-								<span>Portfolio</span>
-								<a class="iknow_tm_full_link" href="#portfolio"></a>
-							</li>
-							<li>
-								<img class="svg" src="img/svg/gear.svg" alt="" />
-								<span>Service</span>
-								<a class="iknow_tm_full_link" href="#service"></a>
-							</li>
-							<li>
-								<img class="svg" src="img/svg/message.svg" alt="" />
-								<span>Testimonial</span>
-								<a class="iknow_tm_full_link" href="#testimonials"></a>
-							</li>
-							<li>
-								<img class="svg" src="img/svg/writing.svg" alt="" />
-								<span>Blog</span>
-								<a class="iknow_tm_full_link" href="#news"></a>
-							</li>
-							<li>
-								<img class="svg" src="img/svg/letter.svg" alt="" />
-								<span>Contact</span>
-								<a class="iknow_tm_full_link" href="#contact"></a>
-							</li>
-						</ul>
+				<div class="iknow_tm_down_arrow">
+					<div class="down-icon white top_120">
+						<a class="anchor" href="#about">
+							<svg width="26px" height="100%" viewBox="0 0 247 390" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+								<path id="wheel" d="M123.359,79.775l0,72.843" style="fill:none;stroke:#fff;stroke-width:20px;"/>
+								<path id="mouse" d="M236.717,123.359c0,-62.565 -50.794,-113.359 -113.358,-113.359c-62.565,0 -113.359,50.794 -113.359,113.359l0,143.237c0,62.565 50.794,113.359 113.359,113.359c62.564,0 113.358,-50.794 113.358,-113.359l0,-143.237Z" style="fill:none;stroke:#fff;stroke-width:20px;"/>
+							</svg>
+						</a>
 					</div>
 				</div>
 			</div>
-		</div>
-		
-		<!-- Hero Shapes -->
-		<div class="simple_shapes">
-			<span class="one anim_scale"><img class="svg" src="img/svg/shapes/9.svg" alt="" /></span>
-			<span class="two anim_moveLeft"><img class="svg" src="img/svg/shapes/dot.svg" alt="" /></span>
-			<span class="three anim_moveTop"><img class="svg" src="img/svg/shapes/dot-2.svg" alt="" /></span>
-			<span class="four anim_circle"><img class="svg" src="img/svg/shapes/1.svg" alt="" /></span>
-			<span class="five anim_circle"><img class="svg" src="img/svg/shapes/8.svg" alt="" /></span>
-			<span class="six anim_circle"><img class="svg" src="img/svg/shapes/3.svg" alt="" /></span>
-			<span class="seven anim_right"><img class="svg" src="img/svg/shapes/4.svg" alt="" /></span>
-			<span class="eight anim_scale"><img class="svg" src="img/svg/shapes/9.svg" alt="" /></span>
-			<span class="nine anim_circle"><img class="svg" src="img/svg/shapes/3.svg" alt="" /></span>
-			<span class="ten anim_moveLeft"><img class="svg" src="img/svg/shapes/4.svg" alt="" /></span>
-			<span class="eleven anim_scale"><img class="svg" src="img/svg/shapes/9.svg" alt="" /></span>
-			<span class="twelve anim_extra"><img class="svg" src="img/svg/shapes/2.svg" alt="" /></span>
-			<span class="thirteen anim_circle"><img class="svg" src="img/svg/shapes/5.svg" alt="" /></span>
-			<span class="fourteen anim_scale"><img class="svg" src="img/svg/shapes/9.svg" alt="" /></span>
-			<span class="fifteen anim_circle"><img class="svg" src="img/svg/shapes/3.svg" alt="" /></span>
-			<span class="sixteen anim_scale"><img class="svg" src="img/svg/shapes/9.svg" alt="" /></span>
-			<span class="seventeen anim_circle"><img class="svg" src="img/svg/shapes/5.svg" alt="" /></span>
-			<span class="eighteen anim_scale"><img class="svg" src="img/svg/shapes/9.svg" alt="" /></span>
-			<span class="nineteen anim_scale"><img class="svg" src="img/svg/shapes/9.svg" alt="" /></span>
-			<span class="twenty anim_circle"><img class="svg" src="img/svg/shapes/1.svg" alt="" /></span>
-		</div>
-		<!-- /Hero Shapes -->
-		
-	</div>
-	<!-- /HERO -->
-	
-	<!-- MAINPART -->
-	<div class="container">
-		<div class="iknow_tm_mainpart">
-	
+			<!-- /HERO -->
+			
 			<!-- ABOUT -->
-			<div id="about" class="iknow_tm_main_section">
+			<div class="iknow_tm_section_new" id="about">
 				<div class="iknow_tm_about">
 					<div class="left">
 						<div class="left_inner">
 							<div class="image">
 								<img src="img/thumbs/35-44.jpg" alt="" />
-								<div class="main" data-img-url="img/about/1.jpg"></div>
+								<div class="main" data-img-url="img/about/3.jpg"></div>
 							</div>
 							<div class="details">
 								<ul>
 									<li>
 										<h3>Name</h3>
-										<span>Jessica Parker</span>
+										<span>James Smith</span>
 									</li>
 									<li>
 										<h3>Birthday</h3>
@@ -197,7 +244,7 @@
 									</li>
 									<li>
 										<h3>Mail</h3>
-										<span>hello@anderson.com</span>
+										<span>hello@james.com</span>
 									</li>
 									<li>
 										<h3>Phone</h3>
@@ -224,7 +271,7 @@
 							<p>A passionate UI/UX Designer and Web Developer based In NYC, USA</p>
 						</div>
 						<div class="text">
-							<p>Hi! My name is Jessica Parker. I am UI/UX designer, and I'm very passionate and dedicated to my work. With 20 years experience as a professional graphic designer, I have acquired the skills and knowledge necessary to make your project a success.</p>
+							<p>Hi! My name is James Smith. I am UI/UX designer, and I'm very passionate and dedicated to my work. With 20 years experience as a professional graphic designer, I have acquired the skills and knowledge necessary to make your project a success.</p>
 						</div>
 						<div class="iknow_tm_button">
 							<a href="img/cv/1.jpg" download>Download CV</a>
@@ -233,9 +280,9 @@
 				</div>
 			</div>
 			<!-- /ABOUT -->
-			
+
 			<!-- RESUME -->
-			<div id="resume" class="iknow_tm_main_section">
+			<div class="iknow_tm_section_new" id="resume">
 				<div class="iknow_tm_resume">
 					<div class="iknow_tm_main_title">
 						<span>Resume</span>
@@ -296,6 +343,7 @@
 												<p>This project is called a thesis and is usually presented in front of a group of people, including university professors who will evaluate it and let the student..</p>
 											</div>
 										</div>
+
 									</li>
 								</ul>
 							</div>
@@ -404,9 +452,9 @@
 				</div>
 			</div>
 			<!-- /RESUME -->
-			
+
 			<!-- PORTFOLIO -->
-			<div id="portfolio" class="iknow_tm_main_section">
+			<div class="iknow_tm_section_new" id="portfolio">
 				<div class="iknow_tm_portfolio">
 					<div class="iknow_tm_main_title">
 						<span>Resume</span>
@@ -468,7 +516,7 @@
 									<a class="iknow_tm_full_link soundcloude_link mfp-iframe audio" href="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/471954807&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></a>
 								</div>
 							</li>
-							
+
 							<li class="youtube">
 								<div class="list_inner">
 									<div class="image">
@@ -512,7 +560,7 @@
 										<h3>Teresa Melbig</h3>
 									</div>
 									<a class="iknow_tm_full_link portfolio_popup" href="#"></a>
-									
+
 									<div class="hidden_content">
 										<div class="popup_details">
 											<div class="main_details">
@@ -578,15 +626,15 @@
 									</div>
 								</div>
 							</li>
-							
+
 						</ul>
 					</div>
 				</div>
 			</div>
 			<!-- /PORTFOLIO -->
-			
+
 			<!-- SERVICES -->
-			<div id="service" class="iknow_tm_main_section">
+			<div class="iknow_tm_section_new" id="service">
 				<div class="iknow_tm_services">
 					<div class="iknow_tm_main_title">
 						<span>Service</span>
@@ -657,6 +705,7 @@
 									</div>
 								</div>
 							</li>
+
 							<li>
 								<div class="list_inner">
 									<span class="icon"><img class="svg" src="img/svg/user.svg" alt="" /></span>
@@ -725,9 +774,9 @@
 				</div>
 			</div>
 			<!-- /SERVICES -->
-			
+
 			<!-- TESTIMONIALS -->
-			<div id="testimonials" class="iknow_tm_main_section">
+			<div class="iknow_tm_section_new" id="testimonial">
 				<div class="iknow_tm_testimonials">
 					<div class="iknow_tm_main_title">
 						<span>Testimonials</span>
@@ -843,9 +892,9 @@
 				</div>
 			</div>
 			<!-- /TESTIMONIALS -->
-			
+
 			<!-- NEWS -->
-			<div id="news" class="iknow_tm_main_section">
+			<div class="iknow_tm_section_new" id="news">
 				<div class="iknow_tm_news">
 					<div class="iknow_tm_main_title">
 						<span>Blog</span>
@@ -864,7 +913,7 @@
 										<span class="category"><a href="#">Web Design</a></span>
 										<h3 class="title"><a href="#">How to create a website using WordPress</a></h3>
 									</div>
-									
+
 									<div class="hidden_content">
 										<div class="news_informations">
 											<div class="text">
@@ -874,7 +923,7 @@
 											</div>
 										</div>
 									</div>
-									
+
 								</div>
 							</li>
 							<li>
@@ -888,7 +937,7 @@
 										<span class="category"><a href="#">Branding</a></span>
 										<h3 class="title"><a href="#">Angular team streamlines requests</a></h3>
 									</div>
-									
+
 									<div class="hidden_content">
 										<div class="news_informations">
 											<div class="text">
@@ -898,7 +947,7 @@
 											</div>
 										</div>
 									</div>
-									
+
 								</div>
 							</li>
 							<li>
@@ -912,7 +961,7 @@
 										<span class="category"><a href="#">UI Design</a></span>
 										<h3 class="title"><a href="#">How to handle errors in React Javascript</a></h3>
 									</div>
-									
+
 									<div class="hidden_content">
 										<div class="news_informations">
 											<div class="text">
@@ -929,9 +978,9 @@
 				</div>
 			</div>
 			<!-- /NEWS -->
-			
+
 			<!-- CONTACT -->
-			<div id="contact" class="iknow_tm_main_section">
+			<div class="iknow_tm_section_new contact" id="contact">
 				<div class="iknow_tm_contact">
 					<div class="iknow_tm_main_title">
 						<span>Contact Me</span>
@@ -998,29 +1047,30 @@
 				</div>
 			</div>
 			<!-- /CONTACT -->
-
-		</div>
-	</div>
-	<!-- /MAINPART -->
-	
-	<!-- COPYRIGHT -->
-	<div class="iknow_tm_copyright hidden">
-		<div class="container">
-			<div class="inner">
-				<div class="left">
-					<p>Designed with love &copy; <a href="https://themeforest.net/user/marketify" target="_blank">Marketify</a></p>
-				</div>
-				<div class="right">
-					<ul>
-						<li><a href="#">Terms &amp; Condition</a></li>
-						<li><a href="#">Privacy Policy</a></li>
-						<li><a href="#">Login</a></li>
-					</ul>
+			
+			<!-- COPYRIGHT -->
+			<div class="iknow_tm_copyright onepage extra">
+				<div class="inner">
+					<div class="left">
+						<p>Designed with love &copy; <a href="https://themeforest.net/user/marketify" target="_blank">Marketify</a></p>
+					</div>
+					<div class="right">
+						<ul>
+							<li><a href="#">Terms &amp; Condition</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+							<li><a href="#">Login</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
+			<span class="bottom_shape"></span>
+			<!-- /COPYRIGHT -->
+			
 		</div>
+		
+		<!-- /MAINPART -->
+		
 	</div>
-	<!-- /COPYRIGHT -->
 	
 	<!-- MAGIC CURSOR -->
 	<div class="mouse-cursor cursor-outer"></div>
