@@ -559,7 +559,7 @@ function iknow_tm_contact_form(){
 	
 	"use strict";
 	
-	jQuery(".contact_form #send_message").off().on('click', function(){
+	jQuery(".contact_form #send_messagess").off().on('click', function(){
 		
 		var name 		= jQuery(".contact_form #name").val();
 		var email 		= jQuery(".contact_form #email").val();

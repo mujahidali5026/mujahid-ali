@@ -48,4 +48,3 @@ if (filter_var($php_email, FILTER_VALIDATE_EMAIL)) {
 	echo "<span class='contact_error'>* Invalid email *</span>";
 }
 
-?>
