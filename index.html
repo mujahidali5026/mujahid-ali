@@ -1280,8 +1280,7 @@
 						</div>
 						<div class="right">
 							<div class="fields">
-								<div class="contact_form" id="contact_forms"
-									autocomplete="off">
+								<div class="contact_form" id="contact_form">
 									<div class="returnmessage"
 										data-success="Your message has been received, We will contact you soon."></div>
 									<div class="empty_notice"><span>Please Fill Required Fields</span></div>
@@ -1348,16 +1347,17 @@
 	<!--[if lt IE 10]> <script type="text/javascript" src="js/ie8.js"></script> <![endif]-->
 	<script src="js/plugins.js"></script>
 	<script src="js/init.js"></script>
-	<script src="modal/sendMail.js"></script>
+	<!-- <script src="modal/sendMail.js"></script> -->
 	<script>
-        document.addEventListener('contextmenu', event => event.preventDefault());
-        document.addEventListener('keydown', function (event) {
-            if ((event.ctrlKey || event.metaKey) && event.key === 's') {
-                event.preventDefault();
-                alert("Inspect Not available!");
-            }
-        });
-    </script>
+		document.addEventListener('contextmenu', event => event.preventDefault());
+		document.addEventListener('keydown', function (event) {
+		    if ((event.ctrlKey || event.metaKey) && event.key === 's') {
+		        event.preventDefault();
+		        alert("Inspect Not available!");
+		    }
+		});	
+		
+	</script>
 	<!-- /SCRIPTS -->
 
 </body>
