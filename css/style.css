@@ -5077,3 +5077,55 @@ input[type=number] {
 	.iknow_tm_modalbox .close{margin-left: 0px;left: auto;right: 0px;top: -35px;}
 	
 }
+
+.blogs_container{
+	max-width: 1100px;
+	margin: auto;
+	background-color: #fff;
+	box-shadow: 0 0 30px -10px gray !important;
+	border-radius: 20px;
+	padding-bottom: 95px !important;
+	padding: 20px;
+	position: relative;
+	overflow: hidden;
+	margin-top: 20px;
+}
+.blogs_container .bread_crumb{
+	display: flex;
+}
+.blogs_container .bread_crumb *{
+	color: #000;
+	text-decoration: none;
+	font-size: 22px;
+	font-weight: 600;
+}
+.blogs_container .bread_crumb p{
+	color: #6f6f6f;
+	font-weight: 500;
+	font-size: 17px;margin-top: 4px;
+	margin-left: 20px;
+}
+body.blogs{
+background: url(../img/blog/banner.jpg);
+height: 100vh;
+box-sizing: border-box;
+background-attachment: fixed;
+font-family: "Poppins",sans-serif !important;
+width: 100%;
+background-size: cover;
+}
+.mt-1{
+	margin-top: 1em;
+}
+body.blogs *{
+	font-family: "Poppins",sans-serif !important;
+}
+@media (max-width:767px){
+	.blg_title_head{
+		float: none !important;
+	}
+	.blogs_container img{
+		float: none !important;
+		padding: 0;
+	}
+}
